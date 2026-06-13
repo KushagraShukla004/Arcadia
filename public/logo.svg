@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Arcadia">
+  <defs>
+    <!-- dawn -> dusk sky -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"    stop-color="#161b3c"/>
+      <stop offset="0.45" stop-color="#3a2f63"/>
+      <stop offset="0.74" stop-color="#b9595a"/>
+      <stop offset="1"    stop-color="#f3a85f"/>
+    </linearGradient>
+    <!-- the sun cresting behind the spire -->
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#fff6d4"/>
+      <stop offset="0.5" stop-color="#ffd27a"/>
+      <stop offset="1"   stop-color="#ff9e5a"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#ffd98f" stop-opacity="0.55"/>
+      <stop offset="1"   stop-color="#ffd98f" stop-opacity="0"/>
+    </radialGradient>
+    <!-- the spire / 'A' -->
+    <linearGradient id="spire" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#2b2752"/>
+      <stop offset="1"   stop-color="#0c1022"/>
+    </linearGradient>
+    <radialGradient id="ground" cx="0.5" cy="0" r="1">
+      <stop offset="0"   stop-color="#1a1330" stop-opacity="0.9"/>
+      <stop offset="1"   stop-color="#1a1330" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="badge">
+      <rect x="8" y="8" width="240" height="240" rx="56"/>
+    </clipPath>
+  </defs>
+
+  <!-- sky -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#sky)"/>
+
+  <g clip-path="url(#badge)">
+    <!-- glow + sun -->
+    <circle cx="128" cy="104" r="92" fill="url(#glow)"/>
+    <circle cx="128" cy="104" r="40" fill="url(#sun)"/>
+
+    <!-- stars in the night band -->
+    <g fill="#ffffff">
+      <circle cx="58"  cy="54" r="1.6" opacity="0.85"/>
+      <circle cx="150" cy="40" r="1.1" opacity="0.7"/>
+      <circle cx="198" cy="66" r="1.5" opacity="0.8"/>
+      <circle cx="86"  cy="86" r="0.9" opacity="0.6"/>
+      <circle cx="210" cy="118" r="1.0" opacity="0.5"/>
+    </g>
+
+    <!-- ground haze -->
+    <ellipse cx="128" cy="244" rx="150" ry="46" fill="url(#ground)"/>
+
+    <!-- the 'A' spire: two legs, a crossbar, and a peaked apex -->
+    <g fill="url(#spire)">
+      <polygon points="40,216 72,216 130,66 118,66"/>
+      <polygon points="216,216 184,216 126,66 138,66"/>
+      <polygon points="108,66 148,66 128,42"/>
+      <rect x="92" y="150" width="72" height="18"/>
+    </g>
+    <!-- sunward rim light on the left slope -->
+    <polyline points="42,214 119,66" fill="none" stroke="#ffcf8f" stroke-width="2.4" stroke-linecap="round" opacity="0.55"/>
+    <!-- tiny pennant on the spire -->
+    <line x1="128" y1="42" x2="128" y2="30" stroke="#ffcf8f" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <polygon points="128,31 142,35 128,40" fill="#ff9e5a"/>
+  </g>
+
+  <!-- crisp badge edge -->
+  <rect x="8.5" y="8.5" width="239" height="239" rx="55.5" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+</svg>
