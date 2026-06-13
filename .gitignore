@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# local Claude Code plugin/tooling config
+.claude/settings.json
